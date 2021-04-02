@@ -5,18 +5,20 @@ from analyze import asc_order, desc_order, print_vals
 
 def main():
     #Crawl sitemap ONLY RUN ONCE!
-    #get_sitemap("https://howtostartanllc.com/sitemap.xml")
+    get_sitemap(**Route to Sitemap**)
     
     #Convert xml to json ONLY RUN ONCE!
     #convert_sitemap_to_json()
     
     #Get just urls ONLY RUN ONCE!
-    #get_urls_list()
+    get_urls_list()
 
+    #Run full crawler ONLY RUN ONCE!
+    crawl_for_links()
 
     #clean data and make sure it's in the right format ONLY RUN ONCE
-    #data = clean_errors()
-    #clean_external_links(data)
+    data = clean_errors()
+    clean_external_links(data)
 
     #Create Scoring list of dicts
     score, new_score = create_scoring_dict()
@@ -25,11 +27,11 @@ def main():
     score = pagerank_alg(score, new_score, 10)
 
     #Analyze data and possibly visualize
-    sorted_asc = asc_order(score)
+    #sorted_asc = asc_order(score)
     #print(sorted_asc)
-    sorted_desc = desc_order(score)
+    #sorted_desc = desc_order(score)
     #print(sorted_desc)
-    print_vals(sorted_desc)
+    #print_vals(sorted_desc)
 
 def dev():
     pass
