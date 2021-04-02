@@ -1,4 +1,4 @@
-from crawl import get_sitemap, convert_sitemap_to_json, get_urls_list, crawl_for_links
+from crawl import get_sitemap, get_urls_list, crawl_for_links
 from process import clean_errors, clean_external_links
 from pagerank import create_scoring_dict, pagerank_alg
 from analyze import asc_order, desc_order, print_vals
@@ -6,9 +6,6 @@ from analyze import asc_order, desc_order, print_vals
 def main():
     #Crawl sitemap ONLY RUN ONCE!
     get_sitemap(**Route to Sitemap**)
-    
-    #Convert xml to json ONLY RUN ONCE!
-    #convert_sitemap_to_json()
     
     #Get just urls ONLY RUN ONCE!
     get_urls_list()

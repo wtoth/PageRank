@@ -7,11 +7,6 @@ import xmltodict
 import httplib2
 import time
 
-#def get_sitemap(url):
-#    response = requests.get(url)
-#    with open("sitemap.xml", "wb") as f:
-#        f.write(response.content)
-
 def get_sitemap(url):
     response = requests.get(url)
     sitemap = response.content
@@ -20,18 +15,6 @@ def get_sitemap(url):
     with open('sitemap.json', 'w') as json_file:
             json_file.write(json_data)
             json_file.close()
-
-
-def convert_sitemap_to_json():
-    pass
-#    with open('sitemap.xml', encoding="utf8") as xml_file:
-#        data_dict = xmltodict.parse(xml_file.read())
-#        xml_file.close()
-#        json_data = json.dumps(data_dict)
-#
-#        with open('sitemap.json', 'w') as json_file:
-#            json_file.write(json_data)
-#            json_file.close()
 
 def get_urls_list():
     addresses = []
